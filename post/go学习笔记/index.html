@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Go学习笔记 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="go原始官网不能访问，google提供了中国区镜像网站The Go Programming Language (google.cn) go的包官方仓库https://pkg.go.dev/ 在vscode里点" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.90.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://huangchaof.github.io/HugoBlog/post/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/HugoBlog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/HugoBlog/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/HugoBlog/favicon-16x16.png">
+<link rel="manifest" href="/HugoBlog/manifest.json">
+<link rel="mask-icon" href="/HugoBlog/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/HugoBlog/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Go学习笔记" />
+<meta property="og:description" content="go原始官网不能访问，google提供了中国区镜像网站The Go Programming Language (google.cn) go的包官方仓库https://pkg.go.dev/ 在vscode里点" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://huangchaof.github.io/HugoBlog/post/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-18T12:12:05+08:00" />
+<meta property="article:modified_time" content="2021-11-18T12:12:05+08:00" />
+
+<meta itemprop="name" content="Go学习笔记">
+<meta itemprop="description" content="go原始官网不能访问，google提供了中国区镜像网站The Go Programming Language (google.cn) go的包官方仓库https://pkg.go.dev/ 在vscode里点"><meta itemprop="datePublished" content="2021-11-18T12:12:05+08:00" />
+<meta itemprop="dateModified" content="2021-11-18T12:12:05+08:00" />
+<meta itemprop="wordCount" content="1716">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Go学习笔记"/>
+<meta name="twitter:description" content="go原始官网不能访问，google提供了中国区镜像网站The Go Programming Language (google.cn) go的包官方仓库https://pkg.go.dev/ 在vscode里点"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/HugoBlog/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/HugoBlog/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/HugoBlog/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/HugoBlog/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/HugoBlog/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/HugoBlog/" class="logo">Even</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/HugoBlog/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/HugoBlog/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/HugoBlog/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/HugoBlog/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Go学习笔记</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-11-18 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#go程序结构">go程序结构</a></li>
+    <li><a href="#go的设计原则">go的设计原则</a></li>
+    <li><a href="#go的并发">go的并发</a></li>
+    <li><a href="#go的包管理依赖管理">go的包管理（依赖管理）</a></li>
+    <li><a href="#go的工具链">go的工具链</a></li>
+    <li><a href="#go如何实现面向对象">go如何实现面向对象</a></li>
+    <li><a href="#泛型支持">泛型支持</a></li>
+    <li><a href="#异常">异常</a></li>
+    <li><a href="#go书籍">go书籍</a></li>
+    <li><a href="#go程序结构-1">go程序结构</a></li>
+    <li><a href="#go语法细节">go语法细节</a>
+      <ul>
+        <li><a href="#gopath"><strong>GOPATH</strong></a></li>
+        <li><a href="#goroot"><strong>GOROOT</strong></a></li>
+        <li><a href="#go-install-安装的包在哪儿"><strong>go install 安装的包在哪儿？</strong></a></li>
+        <li><a href="#gofmt">gofmt</a></li>
+        <li><a href="#包导出函数首字母需要大写">包导出函数首字母需要大写</a></li>
+        <li><a href="#modules管理依赖">modules管理依赖</a></li>
+        <li><a href="#go111module">GO111MODULE</a></li>
+        <li><a href="#修改环境变量">修改环境变量</a></li>
+        <li><a href="#package-main">package main</a></li>
+        <li><a href="#隐式初始化">隐式初始化</a></li>
+        <li><a href="#go的类型系统">go的类型系统</a></li>
+        <li><a href="#go编译快的原因">go编译快的原因</a></li>
+        <li><a href="#导入同名包">导入同名包</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>go原始官网不能访问，google提供了中国区镜像网站<a href="https://golang.google.cn/">The Go Programming Language (google.cn)</a></p>
+<p>go的包官方仓库https://pkg.go.dev/</p>
+<p>在vscode里点击fmt，不只会看到本地的fmt源码，还会在浏览器打开在线的fmt文档</p>
+<h1 id="go程序结构">go程序结构</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;strconv&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">str</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&#34;dsahj我&#34;</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span>
+
+	<span class="kd">var</span> <span class="nx">a</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span>             <span class="c1">// array of 3 integers
+</span><span class="c1"></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>        <span class="c1">// print the first element
+</span><span class="c1"></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1">// print the last element, a[2]
+</span><span class="c1"></span>
+	<span class="c1">// Print the indices and elements.
+</span><span class="c1"></span>	<span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">a</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%d %d\n&#34;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
+	<span class="p">}</span>
+
+	<span class="c1">// Print the elements only.
+</span><span class="c1"></span>	<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">a</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%d\n&#34;</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
+	<span class="p">}</span>
+
+	<span class="nx">i</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">strconv</span><span class="p">.</span><span class="nf">Atoi</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span>
+	<span class="nb">print</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+	<span class="nb">println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>go程序的结构为package 声明， import导入包语句，main函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="err">#</span> <span class="nx">用于多个包的导入</span><span class="err">，</span> <span class="nx">fmt是标准库的格式化输入输出包</span>
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;strconv&#34;</span>
+<span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>变量类型后置（后置原因是便于写程序的parser），由于现在的编译器已经可以推断变量类型，go还有种省略类型的写法 st2 := &ldquo;abc&rdquo;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">var str string = &#34;dsahj我&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>输入输出有fmt.Println() print() println(), 它们区别是什么？</p>
+<p>func定义函数，且函数支持多个返回值</p>
+<h1 id="go的设计原则">go的设计原则</h1>
+<p><strong>运行效率，编译效率，部署效率，开发效率</strong></p>
+<p>go是静态编译型语言，语法类似c，却又带有GC，不要开发者担心内存管理，go源代码编译后会生成一个二进制文件，部署时不需要像java要带jre，或者python带解释器，go的runtime已经编译进了这个二进制文件</p>
+<p>goformt对go源代码进行格式化，且这个命令行工具没有自定义参数，所以go的代码风格统一</p>
+<p>go没有虚拟机，只有运行时，这一点和java不同</p>
+<p><a href="https://zhuanlan.zhihu.com/p/33459503">从Go语言的设计原则分析其适用性 - 知乎 (zhihu.com)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/95056679">万字长文深入浅出 Golang Runtime - 知乎 (zhihu.com)</a></p>
+<p>go提供了runtime 包，支持修改运行时</p>
+<p><a href="https://pkg.go.dev/runtime">runtime package - runtime - pkg.go.dev</a></p>
+<p>go的协程是原生的，支持并发，这适合高并发应用</p>
+<p>go的另一特点就是简化，没有宏、继承、函数重载等特性</p>
+<p>go可以看做是更好的c或者更好的python</p>
+<p>c需要自己管理内存，编译复杂，没有包管理机制，python是动态类型，GIL存在导致不能有效使用多线程，且python的执行效率不够高，分发时体积大</p>
+<p><a href="https://zhuanlan.zhihu.com/p/35746181">Python程序运行原理 - 知乎 (zhihu.com)</a></p>
+<h1 id="go的并发">go的并发</h1>
+<p>goroutines 和channel</p>
+<h1 id="go的包管理依赖管理">go的包管理（依赖管理）</h1>
+<p>在项目目录下使用go.mod文件，记录包的地址（如github的许多包），包的版本号</p>
+<p>添加包可以手动使用go get命令下载，或者go run时自动下载了最新的包</p>
+<h1 id="go的工具链">go的工具链</h1>
+<p><a href="https://github.com/golang/vscode-go/blob/HEAD/docs/tools.md">vscode-go/tools.md at 5ecabf944c5195fd922a6a0bb1f5388d563b6baa · golang/vscode-go (github.com)</a></p>
+<h1 id="go如何实现面向对象">go如何实现面向对象</h1>
+<p><a href="https://www.jianshu.com/p/3d5016e0014a">浅谈GO语言中的面向对象实现 - 简书 (jianshu.com)</a></p>
+<h1 id="泛型支持">泛型支持</h1>
+<p>从1.17开始，支持</p>
+<h1 id="异常">异常</h1>
+<p>go中没有异常，有类型c语言的错误处理机制</p>
+<h1 id="go书籍">go书籍</h1>
+<p><a href="https://books.studygolang.com/gopl-zh/ch1/ch1-01.html">Hello, World · Go语言圣经 (studygolang.com)</a></p>
+<p><a href="https://github.com/talkgo/read">talkgo/read: Go 学习之路：Go 开发者博客、Go 微信公众号、Go 学习资料（文档、书籍、视频） (github.com)</a></p>
+<h1 id="go程序结构-1">go程序结构</h1>
+<p><a href="https://books.studygolang.com/gopl-zh/ch2/ch2-01.html">命名 · Go语言圣经 (studygolang.com)</a></p>
+<h1 id="go语法细节">go语法细节</h1>
+<h2 id="gopath"><strong>GOPATH</strong></h2>
+<p><code>go help environment  | grep GOPATH</code> #查看GOPATH的定义，<code>go help environment</code>帮助了解环境变量</p>
+<p><img src="https://github.com/huangchaof/tutuchuang/img/20211103220932.png" alt="image-20211103220715918"></p>
+<h2 id="goroot"><strong>GOROOT</strong></h2>
+<p><code>go env GOROOT</code> 查看GOROOT的值</p>
+<p><code>go help environment  | grep GOROOT -A 1</code>  —A显示匹配内容及后面几行</p>
+<h2 id="go-install-安装的包在哪儿"><strong>go install 安装的包在哪儿？</strong></h2>
+<p><code>go get gopl.io/ch1/helloworld</code></p>
+<p>安装路径在GOPATH下</p>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211103225133.png" alt="image-20211103225132907"></p>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211103224934.png" alt="image-20211103224934126"></p>
+<p>目录pkg下有个mod目录</p>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211103225023.png" alt="image-20211103225023499"></p>
+<h2 id="gofmt">gofmt</h2>
+<p><code>gofmt main.go</code> 格式化源文件，输出到terminal，并没有改变源文件</p>
+<p>gofmt -w source.go 就地修改源文件</p>
+<h2 id="包导出函数首字母需要大写">包导出函数首字母需要大写</h2>
+<p>函数首字母，只能包内用，不能外部使用。报错如下</p>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211104002148.png" alt="image-20211104002148518"></p>
+<h2 id="modules管理依赖">modules管理依赖</h2>
+<p>go1.13后不再用GOPATH管理依赖，而是用modules</p>
+<p>对go模块管理的吐槽<a href="https://zhuanlan.zhihu.com/p/150234910">Go 语言的优点，缺点和令人厌恶的设计 - 知乎 (zhihu.com)</a></p>
+<p>谷歌单片源代码管理的介绍</p>
+<p><a href="https://research.google/pubs/pub45424/">Why Google stores billions of lines of code in a single</a></p>
+<p><strong>流程如下</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">mkdir project
+cd project
+go mod init mod_name // mod 名字自定义，会在当前目录下生成go.mod文件
+
+//添加新文件夹 
+mkdir mypkg
+cd mypkg
+// 添加一些go文件
+
+//在main.go中引用包
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>例子</strong></p>
+<p>工程目录结构如下</p>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211104001532.png" alt="image-20211104001532613"></p>
+<p>首先运行 go mod init GODEMO,生成go.mod文件</p>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211104001938.png" alt="image-20211104001937915"></p>
+<p>main.go</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;fmt&#34;</span>
+
+	<span class="s">&#34;GODEMO/dir&#34;</span> <span class="c1">//包名为dir
+</span><span class="c1"></span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">&#34;5+6= &#34;</span><span class="p">,</span> <span class="nx">dir</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="s">&#34;this is first go program\n&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>add.go</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">dir</span>
+
+<span class="kd">func</span> <span class="nf">Add</span><span class="p">(</span><span class="nx">a</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span> <span class="c1">//Add写成add就不能被外部引用
+</span><span class="c1"></span>	<span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="go111module">GO111MODULE</h2>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211104143323.png" alt="image-20211104143323326"></p>
+<p>如何开启go代理</p>
+<p><a href="https://goproxy.cn/">七牛云 - Goproxy.cn</a></p>
+<h2 id="修改环境变量">修改环境变量</h2>
+<p>go env -w GOPROXY=https://goproxy.cn,direct</p>
+<p>GOPROXY默认值为 GOPROXY=&ldquo;<a href="https://proxy.golang.org">https://proxy.golang.org</a>,direct&rdquo;</p>
+<h2 id="package-main">package main</h2>
+<p>go代码的执行入口为main函数，切main函数所在包为package main ，如果修改包名main为其他名字，报错：</p>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211104164252.png" alt="image-20211104164252545"></p>
+<h2 id="隐式初始化">隐式初始化</h2>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211104191642.png" alt="image-20211104191642264"></p>
+<h2 id="go的类型系统">go的类型系统</h2>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211104195056.png" alt="image-20211104195055851"></p>
+<h2 id="go编译快的原因">go编译快的原因</h2>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211104195719.png" alt="image-20211104195718870"></p>
+<h2 id="导入同名包">导入同名包</h2>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211104200101.png" alt="image-20211104200101320"></p>
+<p>A Tour to GO</p>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211105131202.png" alt="image-20211105131201907"></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-11-18
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://huangchaof.github.io/HugoBlog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/HugoBlog/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

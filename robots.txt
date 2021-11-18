@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://huangchaof.github.io/HugoBlog/sitemap.xml
