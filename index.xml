@@ -6,7 +6,16 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Nov 2021 16:24:41 +0800</lastBuildDate><atom:link href="https://huangchaof.github.io/HugoBlog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Nov 2021 18:33:29 +0800</lastBuildDate><atom:link href="https://huangchaof.github.io/HugoBlog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cmake</title>
+      <link>https://huangchaof.github.io/HugoBlog/post/cmake/</link>
+      <pubDate>Thu, 18 Nov 2021 18:33:29 +0800</pubDate>
+      
+      <guid>https://huangchaof.github.io/HugoBlog/post/cmake/</guid>
+      <description>cmake命令行用法 1 2 3 4 5 6 cmake -S path/to/src -B path/to/build cmake . #在当前目录下build,不指定输出目录 cmake .. #从上一级目录build cmake -G #查看当前系统支持的构</description>
+    </item>
+    
     <item>
       <title>Javascript</title>
       <link>https://huangchaof.github.io/HugoBlog/post/javascript/</link>
