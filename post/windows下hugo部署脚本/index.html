@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Windows下hugo部署脚本">
 <meta itemprop="description" content="写博客 在博客Root目录下，运行以下命令 1 2 3 4 5 6 7 hugo new post/post-name.md ....... 编辑md文件 ......... # 生成html文件 hugo 脚本缺点：在执行完git status后如果没"><meta itemprop="datePublished" content="2021-11-18T19:34:52+08:00" />
 <meta itemprop="dateModified" content="2021-11-18T19:34:52+08:00" />
-<meta itemprop="wordCount" content="212">
+<meta itemprop="wordCount" content="484">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Windows下hugo部署脚本"/>
 <meta name="twitter:description" content="写博客 在博客Root目录下，运行以下命令 1 2 3 4 5 6 7 hugo new post/post-name.md ....... 编辑md文件 ......... # 生成html文件 hugo 脚本缺点：在执行完git status后如果没"/>
@@ -226,6 +226,93 @@ git push
 <span class="k">echo</span>  <span class="s2">&#34;End &#34;</span>
 <span class="c1">REM 如果要部署完后不关闭cmd窗口，取消下面命令的注释</span>
 <span class="c1">Rem cmd /k </span>
+</code></pre></td></tr></table>
+</div>
+</div><p>根据git status的结果执行，效率更高</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd">
+<span class="p">@</span><span class="k">echo</span> off
+
+<span class="k">echo</span> <span class="s2">&#34;Enter blog  Dir E:\HugoBlog\public &#34;</span>
+<span class="k">echo</span> <span class="s2">&#34;***********************************&#34;</span>
+<span class="k">cd</span> /d  E:\HugoBlog\public 
+
+<span class="k">echo</span> <span class="s2">&#34;Repo status &#34;</span>
+<span class="k">echo</span> <span class="s2">&#34;***********************************&#34;</span>
+
+<span class="c1">Rem git status | grep &#34;working tree clean&#34; 如果匹配正确 ，ERRORLEVEL的值为1，否则为0</span>
+git status <span class="p">|</span> grep <span class="s2">&#34;working tree clean&#34;</span>
+
+<span class="c1">Rem echo %ERRORLEVEL%  打印值  </span>
+<span class="k">if</span> <span class="nv">%ERRORLEVEL%</span> <span class="o">==</span> 1 <span class="p">(</span><span class="k">goto</span> <span class="nl">fun1</span><span class="c1"> </span><span class="p">)</span>
+<span class="k">if</span> <span class="nv">%ERRORLEVEL%</span> <span class="o">==</span> 0 <span class="p">(</span><span class="k">goto</span> <span class="nl">fun2</span><span class="p">)</span>
+
+<span class="c1">Rem  不能把fun1 fun2标签段理解为函数，因为如果前面的执行没有退出，后面会按顺序执行fun2和fun1</span>
+<span class="c1">Rem  goto:eof  就是执行到脚本末尾，不再顺序执行脚本</span>
+<span class="p">:</span><span class="nl">fun2</span>
+	<span class="k">echo</span> <span class="s2">&#34;no changes press any key to exit&#34;</span>
+	<span class="k">pause</span>
+<span class="k">Goto</span><span class="p">:</span><span class="nl">eof</span>
+
+<span class="p">:</span><span class="nl">fun1</span>
+	<span class="k">echo</span> <span class="s2">&#34;Add all changes &#34;</span>
+	<span class="k">echo</span> <span class="s2">&#34;***********************************&#34;</span>
+	git add . 
+	<span class="k">echo</span> <span class="s2">&#34;Commit changes &#34;</span>
+	<span class="k">echo</span> <span class="s2">&#34;***********************************&#34;</span>
+	git commit -m <span class="s2">&#34;new post&#34;</span>
+	<span class="k">echo</span> <span class="s2">&#34;Pull remote repo &#34;</span> 
+	<span class="k">echo</span> <span class="s2">&#34;***********************************&#34;</span>
+	git pull  
+	<span class="k">echo</span> <span class="s2">&#34;Push to remote repo&#34;</span>
+	<span class="k">echo</span> <span class="s2">&#34;***********************************&#34;</span>
+	git push
+	<span class="k">echo</span>  <span class="s2">&#34;End press any key to exit&#34;</span>
+	<span class="k">pause</span> 
+<span class="k">Goto</span> <span class="p">:</span><span class="nl">eof</span>
 </code></pre></td></tr></table>
 </div>
 </div>
