@@ -13,7 +13,7 @@
       <pubDate>Thu, 18 Nov 2021 19:34:52 +0800</pubDate>
       
       <guid>https://huangchaof.github.io/HugoBlog/post/windows%E4%B8%8Bhugo%E9%83%A8%E7%BD%B2%E8%84%9A%E6%9C%AC/</guid>
-      <description>写博客 在博客Root目录下，运行以下命令 1 2 3 4 5 6 7 hugo new post/post-name.md ....... 编辑md文件 ......... # 生成html文件 hugo 脚本缺点：在执行完git status后如果没</description>
+      <description>写博客 在博客Root目录下，运行以下命令 1 2 3 4 5 6 7 hugo new post/post-name.md ....... 编辑md文件 ......... # 生成html文件 hugo 部署脚本 脚本缺点：在执行完git status</description>
     </item>
     
     <item>
