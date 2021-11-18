@@ -6,7 +6,16 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Nov 2021 12:12:05 +0800</lastBuildDate><atom:link href="https://huangchaof.github.io/HugoBlog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Nov 2021 16:24:41 +0800</lastBuildDate><atom:link href="https://huangchaof.github.io/HugoBlog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript</title>
+      <link>https://huangchaof.github.io/HugoBlog/post/javascript/</link>
+      <pubDate>Thu, 18 Nov 2021 16:24:41 +0800</pubDate>
+      
+      <guid>https://huangchaof.github.io/HugoBlog/post/javascript/</guid>
+      <description>javascript能做什么 它到底可以做什么？ JavaScript可以操作哪些API 什么是DOM 如何在vscode中运行HTML 安装open</description>
+    </item>
+    
     <item>
       <title>Go学习笔记</title>
       <link>https://huangchaof.github.io/HugoBlog/post/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>

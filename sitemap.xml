@@ -3,20 +3,27 @@
   
   <url>
     <loc>https://huangchaof.github.io/HugoBlog/</loc>
-    <lastmod>2021-11-18T12:12:05+08:00</lastmod>
+    <lastmod>2021-11-18T16:24:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://huangchaof.github.io/HugoBlog/post/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-11-18T12:12:05+08:00</lastmod>
+    <loc>https://huangchaof.github.io/HugoBlog/post/javascript/</loc>
+    <lastmod>2021-11-18T16:24:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://huangchaof.github.io/HugoBlog/post/</loc>
+    <lastmod>2021-11-18T16:24:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://huangchaof.github.io/HugoBlog/post/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-11-18T12:12:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
