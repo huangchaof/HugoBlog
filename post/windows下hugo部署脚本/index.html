@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Windows下hugo部署脚本">
 <meta itemprop="description" content="写博客 在博客Root目录下，运行以下命令 1 2 3 4 5 6 7 hugo new post/post-name.md ....... 编辑md文件 ......... # 生成html文件 hugo 部署脚本 脚本缺点：在执行完git status"><meta itemprop="datePublished" content="2021-11-18T19:34:52+08:00" />
 <meta itemprop="dateModified" content="2021-11-18T19:34:52+08:00" />
-<meta itemprop="wordCount" content="496">
+<meta itemprop="wordCount" content="550">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Windows下hugo部署脚本"/>
 <meta name="twitter:description" content="写博客 在博客Root目录下，运行以下命令 1 2 3 4 5 6 7 hugo new post/post-name.md ....... 编辑md文件 ......... # 生成html文件 hugo 部署脚本 脚本缺点：在执行完git status"/>
@@ -85,7 +85,7 @@
         <li class="mobile-menu-item">Tags</li>
       </a><a href="/HugoBlog/categories/">
         <li class="mobile-menu-item">Categories</li>
-      </a><a href="/HugoBlog/post/">
+      </a><a href="/HugoBlog/about/">
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
@@ -116,7 +116,7 @@
       </li><li class="menu-item">
         <a class="menu-item-link" href="/HugoBlog/categories/">Categories</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/HugoBlog/post/">About</a>
+        <a class="menu-item-link" href="/HugoBlog/about/">About</a>
       </li>
   </ul>
 </nav>
@@ -132,8 +132,10 @@
       <h1 class="post-title">Windows下hugo部署脚本</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-11-18 </span>
+        <span class="post-time"> Thu, 18 Nov 2021 19:34:52 CST </span>
         
+          <span class="more-meta"> 550 words </span>
+          <span class="more-meta"> 2 mins read </span>
         
       </div>
     </header>
@@ -241,6 +243,8 @@ git push
 </div>
 </div><h1 id="更高效率部署脚本">更高效率部署脚本</h1>
 <p>根据git status的结果执行，效率更高</p>
+<p>这个脚本也存在错误，如果本地repo和remote repo不一致，也会有&quot;nothing to commit, working tree clean&quot;</p>
+<p><img src="https://gitee.com/lensousou/imagerepo/raw/master/img//20211119203525.png" alt="image-20211119203524814"></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -338,17 +342,24 @@ git status <span class="p">|</span> grep <span class="s2">&#34;working tree clea
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-11-18
+        Thu, 18 Nov 2021 19:34:52 CST
         
     </span>
   </p>
   
-  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
 </div>
 <footer class="post-footer">
       
       <nav class="post-nav">
-        
+        <a class="prev" href="/HugoBlog/post/frontmatter/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">FrontMatter</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/HugoBlog/post/cmake/">
             <span class="next-text nav-default">Cmake</span>
             <span class="next-text nav-mobile">Next</span>

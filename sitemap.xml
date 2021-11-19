@@ -2,15 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huangchaof.github.io/HugoBlog/categories/</loc>
+    <lastmod>2021-11-19T20:44:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://huangchaof.github.io/HugoBlog/</loc>
-    <lastmod>2021-11-18T19:34:52+08:00</lastmod>
+    <lastmod>2021-11-19T20:44:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://huangchaof.github.io/HugoBlog/tags/frontmatter/</loc>
+    <lastmod>2021-11-19T20:44:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://huangchaof.github.io/HugoBlog/post/frontmatter/</loc>
+    <lastmod>2021-11-19T20:44:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://huangchaof.github.io/HugoBlog/post/</loc>
-    <lastmod>2021-11-18T19:34:52+08:00</lastmod>
+    <lastmod>2021-11-19T20:44:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://huangchaof.github.io/HugoBlog/tags/</loc>
+    <lastmod>2021-11-19T20:44:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://huangchaof.github.io/HugoBlog/categories/%E5%8D%9A%E5%AE%A2%E6%A0%BC%E5%BC%8F/</loc>
+    <lastmod>2021-11-19T20:44:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,7 +72,21 @@
   </url>
   
   <url>
+    <loc>https://huangchaof.github.io/HugoBlog/tags/go/</loc>
+    <lastmod>2021-11-18T12:12:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://huangchaof.github.io/HugoBlog/post/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-11-18T12:12:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://huangchaof.github.io/HugoBlog/categories/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2021-11-18T12:12:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -46,18 +95,6 @@
   <url>
     <loc>https://huangchaof.github.io/HugoBlog/about/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://huangchaof.github.io/HugoBlog/categories/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huangchaof.github.io/HugoBlog/tags/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
 </urlset>
