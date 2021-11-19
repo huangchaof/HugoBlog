@@ -43,5 +43,15 @@
       <description>go原始官网不能访问，google提供了中国区镜像网站The Go Programming Language (google.cn) go的包官方仓库https://pkg.go.dev/ 在vscode里点</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://huangchaof.github.io/HugoBlog/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://huangchaof.github.io/HugoBlog/about/</guid>
+      <description>此处用于存放一些链接
+Configure Hugo | Hugo (gohugo.io)</description>
+    </item>
+    
   </channel>
 </rss>
